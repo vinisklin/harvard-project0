@@ -1,0 +1,79 @@
+$text-color: #fffafa;
+
+%text-font-e-color {
+    font-family: 'Major Mono Display', monospace;
+    color: $text-color;
+}
+
+header {
+    position: fixed;
+    height: auto;
+    width: 100vw;
+    background-color: transparent;
+}
+
+header {
+
+    nav {
+        text-align: end;
+        align-self: center;
+
+        a {
+            @extend %text-font-e-color;
+            margin: 0 10px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+    }
+}
+
+h2, h4 {
+    @extend %text-font-e-color;
+}
+
+.logo {
+    padding: 10px 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: -webkit-fill-available;
+    height: -moz-available;          /* WebKit-based browsers will ignore this. */
+}
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/hero_aliens_earth.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 10vh 9vw;
+}
+
+#hero a {
+    @extend %text-font-e-color;
+    padding: 10px 20px;
+    align-self: flex-start;
+    border: 1px solid $text-color;
+    border-radius: 50px;
+}
+
+#hero a:hover {
+    background-color: slategray;
+    border-color: slategray;
+    text-decoration: none;
+}
+
+// Mobile
+@media screen and (max-width: 576px) {
+    .logo {
+        padding: 10px 20px;
+        text-align: center;
+
+        img {
+            height: 80px;
+        }
+    }
+}
