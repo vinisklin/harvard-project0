@@ -3,13 +3,13 @@
 
 <head>
     <title>Visit Earth Now!</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
@@ -30,14 +30,144 @@
     <section id="hero">
         <div class="flex-container">
             <h2>uNsATisFieD WiTH TRAVeLinG<br> To THe SAMe PlACe <br>oVER ANd oVER AGAiN??</h2>
-            <h4>GIVe A cHANce To A<br> ToTAllY NeW <strong>eXPeRieNce!</strong></h4>
-            <a href="#travel_earth">WHAT NeW eXPeRieNce? </a>
+            <h4 style="width: 30vw;">THe WATeR PlANeT is FiNAllY oPeN To VisiToRs, ANd is FUll oF NeW eXPeRieNces!</h4>
+            <a href="#section_experiences">WHAT NeW eXPeRieNces? </a>
         </div>
     </section>
 
-    <section id="travel_earth">
-        <h1>Visit Earth Now!</h1>
+    <section id="section_experiences">
+        <h4>on a planet with such diversity, of course we have several ways to entertain you! choose the plan that best
+            suits your taste!</h4>
+        <div class="mx-auto row">
+            <div class="col-md-5 d-flex flex-column justify-content-around">
+                <h3>Landscape Lover</h3>
+                <h4>Enjoy beautiful scenery? With this plan you can fly over the most beautiful views in the world
+                    by controlling an animal that flies!</h4>
+            </div>
 
+            <div id="carousel_landscapes" class="carousel slide col-md-7" data-ride="carousel">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#carousel_landscapes" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel_landscapes" data-slide-to="1"></li>
+                    <li data-target="#carousel_landscapes" data-slide-to="2"></li>
+                </ul>
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/landscape1.jpg" alt="Landscape1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/landscape2.jpg" alt="Landscape2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/landscape3.jpg" alt="Landscape3">
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#carousel_landscapes" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#carousel_landscapes" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+        <div class="mx-auto row">
+            <div id="carousel_animals" class="carousel slide col-md-7" data-ride="carousel">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#carousel_animals" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel_animals" data-slide-to="1"></li>
+                    <li data-target="#carousel_animals" data-slide-to="2"></li>
+                </ul>
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/animal1.jpg" alt="Shark">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/animal2.jpg" alt="Tiger">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/animal3.jpg" alt="Crocodile">
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#carousel_animals" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#carousel_animals" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+
+            <div class="col-md-5 d-flex flex-column justify-content-around">
+                <h3>Wild Adventurer</h3>
+                <h4>this plan is for those who want action. Become a predator and hunt your prey, as this is common
+                    among certain species on this planet*</h4>
+            </div>
+        </div>
+        <div class="mx-auto row">
+            <div class="col-md-5 d-flex flex-column justify-content-around">
+                <h3>curious Anthropologist</h3>
+                <h4>more interested in getting to know the dominant species on the planet, their customs, entertainment
+                    and
+                    way of thinking? then be a human and interact with them yourself!</h4>
+            </div>
+
+            <div id="carousel_people" class="carousel slide col-md-7" data-ride="carousel">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#carousel_people" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel_people" data-slide-to="1"></li>
+                    <li data-target="#carousel_people" data-slide-to="2"></li>
+                </ul>
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/people1.jpg" alt="People Having Fun">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/people2.jpg" alt="People Praying">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/people3.jpg" alt="People Talking">
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#carousel_people" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#carousel_people" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_attributes">
+        <h1>VisiT EARTH NoW!</h1>
+        <h4>This planet has a very special feature: it has a lot of water, which meant that a huge diversity of living
+            beings could develop on it. Buy your ticket now and explore it all!</h4>
+        <div class="mx-auto row">
+            <div id="attribute1" class="col-sm-6 col-md-3">
+                <h4>WATeR</h4>
+                <button>See More</button>
+            </div>
+            <div id="attribute2" class="col-sm-6 col-md-3">
+                <h4>HUMANs</h4>
+                <button>See More</button>
+            </div>
+            <div id="attribute3" class="col-sm-6 col-md-3">
+                <h4>ANiMALs</h4>
+                <button>See More</button>
+            </div>
+            <div id="attribute4" class="col-sm-6 col-md-3">
+                <h4>BeAuTiFuL VieWs</h4>
+                <button>See More</button>
+            </div>
+        </div>
     </section>
 
     <footer>

@@ -1,13 +1,23 @@
-#hero a, h2, h4, header nav a {
+#hero a, h1, h2, h3, h4, header nav a {
   font-family: "Major Mono Display", monospace;
   color: #fffafa;
+}
+
+#attribute4, #attribute3, #attribute2, #attribute1 {
+  background-position: center;
+  background-size: cover;
+  min-height: 574px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
   position: fixed;
   height: auto;
-  width: 100vw;
-  background-color: transparent;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 header nav {
@@ -18,6 +28,10 @@ header nav a {
   margin: 0 10px;
   font-size: 1.2em;
   font-weight: 600;
+}
+
+body {
+  background-color: black;
 }
 
 .logo {
@@ -53,6 +67,39 @@ header nav a {
   background-color: slategray;
   border-color: slategray;
   text-decoration: none;
+}
+
+.carousel-item img {
+  height: 500px;
+}
+
+#section_experiences {
+  padding: 0 20px;
+  text-align: center;
+}
+#section_experiences h4 {
+  padding: 10vh 0;
+}
+
+#section_attributes {
+  padding-top: 10vh;
+  text-align: center;
+}
+
+#attribute1 {
+  background-image: url(images/attribute1.jpg);
+}
+
+#attribute2 {
+  background-image: url(images/attribute2.jpg);
+}
+
+#attribute3 {
+  background-image: url(images/attribute3.jpg);
+}
+
+#attribute4 {
+  background-image: url(images/attribute4.jpg);
 }
 
 @media screen and (max-width: 576px) {

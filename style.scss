@@ -5,11 +5,21 @@ $text-color: #fffafa;
     color: $text-color;
 }
 
+%element-attribute {
+    background-position: center;
+    background-size: cover;
+    min-height: 574px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 header {
     position: fixed;
     height: auto;
-    width: 100vw;
-    background-color: transparent;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 header {
@@ -27,7 +37,11 @@ header {
     }
 }
 
-h2, h4 {
+body {
+    background-color: black;
+}
+
+h1, h2, h3, h4 {
     @extend %text-font-e-color;
 }
 
@@ -64,6 +78,44 @@ h2, h4 {
     background-color: slategray;
     border-color: slategray;
     text-decoration: none;
+}
+
+.carousel-item img {
+    height: 500px;
+}
+
+#section_experiences {
+    padding: 0 20px;
+    text-align: center;
+
+    h4 {
+        padding: 10vh 0;
+    }
+}
+
+#section_attributes {
+    padding-top: 10vh;
+    text-align: center;
+}
+
+#attribute1 {
+    @extend %element-attribute;
+    background-image: url(images/attribute1.jpg);
+}
+
+#attribute2 {
+    @extend %element-attribute;
+    background-image: url(images/attribute2.jpg);
+}
+
+#attribute3 {
+    @extend %element-attribute;
+    background-image: url(images/attribute3.jpg);
+}
+
+#attribute4 {
+    @extend %element-attribute;
+    background-image: url(images/attribute4.jpg);
 }
 
 // Mobile
