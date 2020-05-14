@@ -1,4 +1,4 @@
-#hero a, h1, h2, h3, h4, header nav a {
+h1, h2, h3, h4, header nav a, button, #hero a {
   font-family: "Major Mono Display", monospace;
   color: #fffafa;
 }
@@ -13,13 +13,19 @@
   align-items: center;
 }
 
+button, #hero a {
+  padding: 10px 20px;
+  border: 1px solid #fffafa;
+  border-radius: 50px;
+}
+
 header {
   position: fixed;
   height: auto;
   width: 100%;
   background-color: rgba(0, 0, 0, 0);
+  z-index: 5;
 }
-
 header nav {
   text-align: end;
   align-self: center;
@@ -46,6 +52,9 @@ body {
   height: -moz-available;
   /* WebKit-based browsers will ignore this. */
 }
+.flex-container h4 {
+  width: 30vw;
+}
 
 #hero {
   width: 100%;
@@ -57,10 +66,7 @@ body {
 }
 
 #hero a {
-  padding: 10px 20px;
   align-self: flex-start;
-  border: 1px solid #fffafa;
-  border-radius: 50px;
 }
 
 #hero a:hover {
@@ -77,13 +83,30 @@ body {
   padding: 0 20px;
   text-align: center;
 }
-#section_experiences h4 {
-  padding: 10vh 0;
+#section_experiences h1, #section_experiences h4 {
+  padding: 5vh 0;
+}
+
+hr.dotted {
+  border-top: 3px dotted #fffafa;
+}
+
+button {
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: slategray;
+  border-color: slategray;
 }
 
 #section_attributes {
   padding-top: 10vh;
   text-align: center;
+}
+#section_attributes h4 {
+  margin: 5vh 5vw;
 }
 
 #attribute1 {
@@ -103,12 +126,59 @@ body {
 }
 
 @media screen and (max-width: 576px) {
+  header {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  header nav {
+    display: none;
+  }
+
   .logo {
     padding: 10px 20px;
     text-align: center;
   }
   .logo img {
     height: 80px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  #hero {
+    background-image: url(images/hero_mobile.jpg);
+  }
+
+  .flex-container {
+    text-align: center;
+  }
+  .flex-container h4 {
+    width: inherit;
+  }
+  .flex-container a {
+    align-self: center;
+  }
+
+  #section_experiences {
+    padding: 0 5px;
+  }
+  #section_experiences h1, #section_experiences h4 {
+    padding: 2vh 0;
+  }
+  #section_experiences .reverse {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 

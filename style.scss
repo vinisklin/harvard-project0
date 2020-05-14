@@ -15,14 +15,19 @@ $text-color: #fffafa;
     align-items: center;
 }
 
+%button-transparent {
+    @extend %text-font-e-color;
+    padding: 10px 20px;
+    border: 1px solid $text-color;
+    border-radius: 50px;
+}
+
 header {
     position: fixed;
     height: auto;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.0);
-}
-
-header {
+    z-index: 5;
 
     nav {
         text-align: end;
@@ -55,6 +60,10 @@ h1, h2, h3, h4 {
     justify-content: space-evenly;
     height: -webkit-fill-available;
     height: -moz-available;          /* WebKit-based browsers will ignore this. */
+
+    h4 {
+        width: 30vw;
+    }
 }
 
 #hero {
@@ -67,11 +76,8 @@ h1, h2, h3, h4 {
 }
 
 #hero a {
-    @extend %text-font-e-color;
-    padding: 10px 20px;
+    @extend %button-transparent;
     align-self: flex-start;
-    border: 1px solid $text-color;
-    border-radius: 50px;
 }
 
 #hero a:hover {
@@ -88,14 +94,33 @@ h1, h2, h3, h4 {
     padding: 0 20px;
     text-align: center;
 
-    h4 {
-        padding: 10vh 0;
+    h1, h4 {
+        padding: 5vh 0;
     }
+}
+
+hr.dotted {
+    border-top: 3px dotted $text-color;
+}
+
+button {
+    @extend %button-transparent;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: slategray;
+    border-color: slategray;
 }
 
 #section_attributes {
     padding-top: 10vh;
     text-align: center;
+
+    h4 {
+        margin: 5vh 5vw;
+    }
 }
 
 #attribute1 {
@@ -120,12 +145,64 @@ h1, h2, h3, h4 {
 
 // Mobile
 @media screen and (max-width: 576px) {
+    header {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.0);
+
+        nav {
+            display: none;
+        }
+    }
+
     .logo {
         padding: 10px 20px;
         text-align: center;
 
         img {
             height: 80px;
+        }
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    #hero {
+        background-image: url(images/hero_mobile.jpg);
+    }
+
+    .flex-container {
+        text-align: center;
+
+        h4 {
+            width: inherit;
+        }
+        
+        a {
+            align-self: center;
+        }
+    }
+
+    #section_experiences {
+        padding: 0 5px;
+    
+        h1, h4 {
+            padding: 2vh 0;
+        }
+
+        .reverse {
+            display: flex;
+            flex-direction: column-reverse;
         }
     }
 }
